@@ -1,0 +1,8 @@
+<div class="p-pt-lg-5">
+    <p-virtualScroller [value]="cars" scrollHeight="400px" [itemSize]="125" >
+        <ng-template pTemplate="item" let-car>
+            <app-search-item [caritem]="car"></app-search-item>
+        </ng-template>
+    </p-virtualScroller>
+</div>
+ 

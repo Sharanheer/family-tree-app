@@ -1,0 +1,24 @@
+<div class="p-px-lg-6 p-pt-sm-3">
+    <p-card [subheader]="usercomment.username">
+        <div class="p-text-right">
+            <span>{{usercomment.comment}}</span>
+            <!-- On edit button click, enable textarea for the user to edit and on save toggle it-->
+            <!-- <textarea [rows]="2" [cols]="70" pInputTextarea autoResize="autoResize">{{usercomment.comment}}</textarea> -->
+        </div>
+        <br>
+        <div class="p-grid">
+            <div class="p-col p-text-left">
+                <a href="#"><span class="pi pi-thumbs-up">{{usercomment.approved}}</span></a>
+                &nbsp;
+                <a href="#"><span class="pi pi-thumbs-down">{{usercomment.denied}}</span></a>
+            </div>
+            <div class="p-col p-text-right">
+                <button pButton type="button" label="Edit" class="p-button-text p-button-sm"></button>
+                <button pButton type="button" label="Cancel" class="p-button-text p-button-sm"></button>
+                <button pButton type="button" label="Save" class="p-button-text p-button-sm"></button>
+                &nbsp;
+                <button pButton type="button" label="Delete" class="p-button-text p-button-sm p-button-danger"></button>
+            </div>
+        </div>
+    </p-card>
+</div>

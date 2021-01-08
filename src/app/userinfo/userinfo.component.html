@@ -1,0 +1,203 @@
+<div class="p-px-lg-3 p-pt-lg-3">
+    <p-card>
+        <div class="p-grid">
+            <div class="p-col-fixed" style="width:30%">
+                <div >
+                    <div class="p-text-center">
+                        <div style="width:90%" class="p-pb-lg-3">
+                        <img src="#" alt="user image">
+                        <br>
+                        <br>
+                        <span>Sharanheer Choudhari
+                            <br>Gender : Male </span>
+                            <br>
+                        
+                        <br>
+                        <button pButton type="button" label="View Tree" class="p-button-md"></button>
+                        <br>
+                        <br>
+                        <hr style="width:90%">
+                        </div>
+
+                        <!-- <div style="width:90%; " class="p-pb-md-3">
+                            <p-card [subheader]="'Gender: '">
+                                <input type="text" pInputText class="p-inputtext-sm" placeholder="Male" disabled>
+                            </p-card>
+                        </div> -->
+
+                        <div style="width:90%" class="p-pb-md-3">
+                            <p-card [subheader]="'Birth Info:'">
+
+                                <p-timeline [value]="lifeStatusEvents">
+                                    <ng-template pTemplate="content" let-event>
+                                        <small class="p-text-secondary">{{event.date}}</small>
+                                    </ng-template>
+                                    <ng-template pTemplate="opposite" let-event>
+                                        {{event.status}}
+                                    </ng-template>
+                                </p-timeline>
+                                
+                            </p-card>
+                        </div>
+
+                        <div style="width:90%" class="p-pb-md-3">
+                            <p-card [subheader]="'Marital Status :'">
+
+                                <p-timeline [value]="maritalStatusEvents">
+                                    <ng-template pTemplate="content" let-event>
+                                        <small class="p-text-secondary">{{event.date}}</small>
+                                    </ng-template>
+                                    <ng-template pTemplate="opposite" let-event>
+                                        {{event.status}}
+                                    </ng-template>
+                                </p-timeline>
+                                
+                            </p-card>
+                        </div>
+
+                        <div style="width:90%" class="p-pb-md-3">
+                            <p-card [subheader]="'Nationality :'">
+
+                                <p-timeline [value]="nationalityEvents">
+                                    <ng-template pTemplate="content" let-event>
+                                        <small class="p-text-secondary">{{event.date}}</small>
+                                    </ng-template>
+                                    <ng-template pTemplate="opposite" let-event>
+                                        {{event.status}}
+                                    </ng-template>
+                                </p-timeline>
+                                
+                            </p-card>
+                        </div>
+
+                        <div style="width:90%" class="p-pb-md-3">
+                            <p-card [subheader]="'Occupation :'">
+
+                                <p-timeline [value]="occupationEvents">
+                                    <ng-template pTemplate="content" let-event>
+                                        <small class="p-text-secondary">{{event.date}}</small>
+                                    </ng-template>
+                                    <ng-template pTemplate="opposite" let-event>
+                                        {{event.status}}
+                                    </ng-template>
+                                </p-timeline>
+                                
+                            </p-card>
+                        </div>
+                        
+                        <div style="width:90%" class="p-pb-md-3">
+                            <p-card [subheader]="'Location :'">
+
+                                <p-timeline [value]="locationEvents">
+                                    <ng-template pTemplate="content" let-event>
+                                        <small class="p-text-secondary">{{event.date}}</small>
+                                    </ng-template>
+                                    <ng-template pTemplate="opposite" let-event>
+                                        {{event.status}}
+                                    </ng-template>
+                                </p-timeline>
+                                
+                            </p-card>
+                        </div>
+<!--                         
+                        <div class="p-pb-sm-2">
+                            <label for="fieldId">Location : </label>
+                            <input type="text" pInputText class="p-inputtext-sm" placeholder="Virginia, United States" disabled>
+                        </div> -->
+                        
+                    </div>
+                </div>
+            </div>
+            <div style="border-left: 2px solid green; left: 50%; top: 2%; margin-left: -15px;"></div>
+            <div class="p-col">
+                <div class="p-px-lg-6">
+                    <!-- <div class="p-text-center"> -->
+                    <div>
+                        <p-card [subheader]="'Family Info'"> 
+                            
+                            <div class="p-grid">
+                                <div class="p-col-fixed p-text-right" style="width:15%">
+                                    <div class="p-pb-md-4 "> Father :</div>
+                                    <div class="p-pb-md-4"> Mother :</div>
+                                    <div class="p-pb-md-4"> Siblings :</div>
+                                    <div class="p-pb-md-4"> Spouse :</div>
+                                    <div> Children :</div>
+                                </div>
+
+                                <div class="p-col p-text-left">
+                                    <div class="p-pb-md-4 "> <a href="#">Chhogalal Choudhary</a></div>
+                                    <div class="p-pb-md-4"> <a href="#">Panibai Choudhary</a></div>
+                                    <div class="p-pb-md-4"> <a href="#">Reena Choudhary</a> , <a href="#">Karanheer Choudhary</a></div>
+                                    <div class="p-pb-md-4"> <a href="#">Khushboo Choudhari</a></div>
+                                    <div> None</div>
+                                </div>
+                            </div>
+                            
+                        </p-card>
+
+                        <br>
+
+                        <p-card [subheader]="'Summary'">
+                            I like to code and love Indian food!
+                        </p-card>
+
+                        <br>
+
+                        <p-card [subheader]="'Social Link'">
+                            <div class="p-grid">
+                                <div class="p-col-fixed p-text-right" style="width:15%">
+                                    <div class="p-pb-md-4 "> Facebook :</div>
+                                    <div class="p-pb-md-4"> Instagram :</div>
+                                    <div > LinkedIn :</div>
+                                </div>
+
+                                <div class="p-col p-text-left">
+                                    <div class="p-pb-md-4 "> <a href="#">https://facebook.com/sharanheer</a></div>
+                                    <div class="p-pb-md-4"> <a href="#">https://instagram.com/sharanheer</a></div>
+                                    <div> None</div>
+                                </div>
+                            </div>
+                        </p-card>
+
+                        <br>
+
+                        <p-card [subheader]="'Suggestion'">
+                            <!-- <input type="text" pInputText class="p-inputtext-md"  placeholder="Any suggestions or correction">  -->
+                            <textarea [rows]="3" [cols]="80" pInputTextarea placeholder="Any suggestions or correction" autoResize="autoResize"></textarea>
+                            &nbsp;
+                            <button pButton type="button" label="Post" class="p-button p-button-sm"></button>
+                            <br>
+                            <br>
+                            <hr>
+                            <div class="p-pt-sm-3">
+                                <!-- <p-virtualScroller [value]="userComments" scrollHeight="200px" [itemSize]="150"> -->
+                                    <!-- <ng-template pTemplate="item" let-comment> -->
+                                    <div *ngFor="let comment of userComments">   
+                                        <app-usercomment [usercomment]="comment"></app-usercomment>
+                                    </div> 
+                                    <!-- </ng-template> -->
+                                <!-- </p-virtualScroller> -->
+                            </div>
+                        </p-card>
+                        <!-- <div class="p-fluid p-formgrid p-grid p-pb-lg-4">
+                            <span class="p-float-label p-col">
+                                <input id="float-input" type="text" pInputText> 
+                                <label for="float-input">Father Firstname</label>
+                            </span>
+        
+                            <span class="p-float-label p-col">
+                                <input id="float-input" type="text" pInputText> 
+                                <label for="float-input">Father Lastname</label>
+                            </span>
+                        </div> -->
+                        
+                        
+                        <!-- <button pButton type="button" label="Search" class="p-button-lg"></button> -->
+                        <!-- <button label="Search" class="p-button-lg"></p-button> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </p-card>
+</div>

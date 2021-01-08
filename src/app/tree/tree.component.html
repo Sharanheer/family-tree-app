@@ -1,0 +1,180 @@
+<form id="form1">
+ 
+    <div class="tree" id="FamilyTreeDiv">
+    
+        <!--Not implementing: just for future reference if displaying both user and user's spouse parents will have to find a different way-->
+        <!-- <app-treenode [userId]="parentId" [level]="2"></app-treenode> -->
+        <ul>
+            <li>
+                <div id="special-div">
+                    <app-treenode [userId]="parentId"></app-treenode>
+                </div>
+        
+                <ul>
+                    <li *ngFor="let sibling of siblingArray">
+                        <div id="special-div">
+                            <app-treenode [userId]="sibling"></app-treenode>
+                        </div>
+
+                        <ul *ngIf="sibling===userId">
+                            <li *ngFor="let child of childArray">
+                                <div id="special-div">
+                                    <app-treenode [userId]="child"></app-treenode>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                  
+            </li>
+
+        </ul>
+    </div>
+     
+    <!-- <ul>
+     
+    <li>
+    <div><span class="male">Joe Mighty
+    <br>1601 - 1681</span></div>
+    </li>
+     
+     
+    <li>
+    <div><span class="female">Sue Mighty
+    <br>1607 - 1685</span><span class="spacer"></span><span class="male">Jim Snow
+    <br>1633 - 1697</span></div>
+     
+     
+    <ul>
+     
+    <li>
+     
+    <div><span class="male">Sam Snow
+    <br>1631 - 1695</span><span class="spacer"></span><span class="female">Lily Sight
+    <br>1633 - 1697</span></div>
+     
+     
+    <ul>
+     
+    <li>
+    <div><span class="male">Ralf Snow
+    <br>1651 - </span></div>
+    </li>
+     
+     
+    <li>
+    <div><span class="female">Brie Snow
+    <br>1653 - </span></div>
+    </li>
+     
+    </ul>
+     
+    </li>
+     
+     
+    <li>
+     
+    <div><span class="male">Jim Snow
+    <br>1633 - 1697</span><span class="spacer"></span><span class="female">Zoe Blue
+    <br>1633 - 1697</span></div>
+     
+     
+    <ul>
+     
+    <li>
+    <div><span class="male">Ralf Snow
+    <br>1651 - </span><span class="spacer"></span><span class="female">Sally Bern
+    <br>1653 - </span></div>
+     
+     
+    <ul>
+     
+    <li>
+    <div><span class="female">Magna Snow
+    <br>1679 - </span></div>
+    </li>
+     
+    </ul>
+    </li>
+     
+     
+    <li>
+    <div><span class="female">Brie Snow
+    <br>1653 - </span></div>
+    </li>
+     
+    </ul>
+     
+    </li>
+     
+     
+    <li>
+    <div><span class="male">John Snow 
+    <br>1635 - 1699</span></div>
+
+        <ul>
+     
+        <li>
+        <div><span class="male">Ralf Snow
+        <br>1651 - </span><span class="spacer"></span><span class="female">Sally Bern
+        <br>1653 - </span></div>
+         
+         
+        <ul>
+         
+        <li>
+        <div><span class="female">Magna Snow
+        <br>1679 - </span></div>
+        </li>
+         
+        </ul>
+        </li>
+         
+         
+        <li>
+        <div><span class="female">Brie Snow
+        <br>1653 - </span></div>
+
+        <ul>
+     
+            <li>
+            <div><span class="male">Ralf Snow
+            <br>1651 - </span><span class="spacer"></span><span class="female">Sally Bern
+            <br>1653 - </span></div>
+             
+             
+            <ul>
+             
+            <li>
+            <div><span class="female">Magna Snow
+            <br>1679 - </span></div>
+
+            </li>
+             
+            </ul>
+            </li>
+             
+             
+            <li>
+            <div><span class="female">Brie Snow
+            <br>1653 - </span></div>
+            </li>
+             
+            </ul>
+
+        </li>
+         
+        </ul>
+
+    </li>
+
+    
+     
+    </ul>
+    </li>
+     
+    </ul> -->
+     
+    <!-- </div> -->
+     
+</form>

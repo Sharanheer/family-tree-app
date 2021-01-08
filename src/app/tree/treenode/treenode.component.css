@@ -1,0 +1,55 @@
+.male p {
+    padding:0px;
+    margin: 0px !important;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+
+}
+
+.male p:hover {
+    background-color: #17a2b8;;
+    /* background-color: rgb(117, 186, 207); */
+    transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    border-radius: 4px;
+}
+
+.male {
+    background-color:#add8e6;
+    display: inline-block;
+    width: 100px;
+    padding:10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    white-space:normal;
+}
+
+.male:hover {
+    background-color:#87cde4;
+}
+
+/* .male p {
+    white-space:normal;
+} */
+
+.female {
+    background-color:lightpink;
+    display: inline-block;
+    width:100px;
+    padding:10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    white-space:normal;
+}
+
+.female:hover {
+    background-color:rgb(247, 146, 163);
+}
+
+.spacer {
+    background-color:lightblue;
+    display: inline-block;
+    width:10px;
+}
+

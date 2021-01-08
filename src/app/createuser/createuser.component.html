@@ -1,0 +1,180 @@
+<div class="p-px-lg-3 p-pt-lg-3">
+    <p-card>
+            <div class="p-grid">
+                <div class="p-col-fixed" style="width:30%">
+                    <div class="p-text-center">
+                        <div style="width:90%" class="p-pb-lg-3">
+                            <img src="#" alt="user image">
+                            <br>
+                            <br>
+                            <button pButton type="button" label="Add Image" class="p-button-md"></button>
+                            &nbsp;
+                            <button pButton type="button" label="Click Photo" class="p-button-md"></button>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border-left: 2px solid green; left: 50%; top: 2%; margin-left: -15px;"></div>
+
+                <div class="p-col">
+                    <div class="p-px-lg-6">
+                        <div class="p-grid">
+                            
+                            <div class="p-col-fixed p-text-right" style="width:35%">
+                                <div class="p-pb-md-4 p-mt-md-2"> <label for="float-input">FirstName : </label> </div>
+                                <div class="p-pb-md-4 p-mt-md-2" > <label for="float-input">LastName : </label> </div>
+                                <div class="p-pb-md-4 p-mt-md-3"> <label for="float-input">Gender : </label> </div>
+                                <div class="p-pb-md-4 p-mt-md-3"> <label for="float-input">Birth Year : </label> </div>
+                                <div class="p-pb-md-4 p-mt-md-3"> <label for="float-input">Check the box if the person is alive </label> </div>
+                                <div *ngIf="!personIsAlive" class="p-pb-md-4 p-mt-md-1"> <label for="float-input">Death Year : </label> </div>
+                            </div>
+
+                            <div class="p-col p-text-left">
+                                <div class="p-pb-md-4 "> <input type="text" pInputText class="p-inputtext-sm"  placeholder="Enter FirstName"></div>
+                                <div class="p-pb-md-4"> <input type="text" pInputText class="p-inputtext-sm"  placeholder="Enter LastName"></div>
+                                <div class="p-pb-md-4"> <p-dropdown [options]="genderList" [(ngModel)]="selectedGender" optionLabel="name"></p-dropdown></div>
+                                <!-- <div class="p-pb-md-4"> <input type="text" pInputText class="p-inputtext-sm"  placeholder="Enter Birth Year"></div> -->
+                                <div class="p-pb-md-4"><p-calendar [(ngModel)]="birthDateValue" [showTransitionOptions]="'200ms'" [hideTransitionOptions]="'200ms'" showIcon="true"></p-calendar></div>
+                                <div class="p-pb-md-4"><p-checkbox [(ngModel)]="value" [binary]="true" (onChange)="personAlive()"></p-checkbox></div>
+                                <div *ngIf="!personIsAlive"> <p-calendar [(ngModel)]="deathDateValue" [showTransitionOptions]="'200ms'" [hideTransitionOptions]="'200ms'" showIcon="true"></p-calendar></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <div class="p-grid">
+            <div class="p-col p-px-lg-6">
+                <div class="p-grid">
+                    <div class="p-col">
+                        <div class="p-text-left"> 
+                            <h3>Marital Status</h3>
+                        </div>
+                    </div>
+                    <div class="p-col">
+                        <div class="p-text-center p-pt-lg-3 p-pr-lg-6"> 
+                            <button pButton type="button" label="Add" class="p-button-md" (click)="addNewMaritalStatus()"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngFor="let ms of maritalStatus; let i = index" class="p-pb-lg-3">
+                    <p-dropdown [options]="maritalStatusOptionsList" optionLabel="name"> </p-dropdown>  &nbsp; 
+                    <p-calendar  [showTransitionOptions]="'200ms'" [hideTransitionOptions]="'200ms'" showIcon="true" [readonlyInput]="true"></p-calendar>  &nbsp; 
+                    <button pButton type="button" class="p-button-md"  icon="pi pi-trash" (click)="deleteMaritalStatus(i)" ></button>
+                </div>
+
+                <div class="p-pl-lg-1" *ngIf="maritalStatus.length == 0">
+                    <br>
+                    <br>
+                    No marital status available, click the Add button to add marital status
+                </div>
+                 
+            </div>
+
+            <div class="p-col">
+                <div class="p-grid">
+                    <div class="p-col">
+                        <div class="p-text-left"> 
+                            <h3>Nationality</h3>
+                        </div>
+                    </div>
+                    <div class="p-col">
+                        <div class="p-text-center p-pt-lg-3 p-pr-lg-6"> 
+                            <button pButton type="button" label="Add" class="p-button-md" (click)="addNewNationalityStatus()"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngFor="let ns of nationalityStatus; let i = index" class="p-pb-lg-3">
+                    <p-dropdown [options]="countriesList" optionLabel="name"> </p-dropdown>  &nbsp; 
+                    <p-calendar  [showTransitionOptions]="'200ms'" [hideTransitionOptions]="'200ms'" showIcon="true" [readonlyInput]="true"></p-calendar>  &nbsp; 
+                    <button pButton type="button" class="p-button-md"  icon="pi pi-trash" (click)="deleteNationalityStatus(i)" ></button>
+                </div>
+
+                <div class="p-pl-lg-1" *ngIf="nationalityStatus.length == 0">
+                    <br>
+                    <br>
+                    No Nationality data available, click the Add button to add your Nationality status
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <div class="p-grid">
+            <div class="p-col p-px-lg-6">
+                <div class="p-grid">
+                    <div class="p-col">
+                        <div class="p-text-left"> 
+                            <h3>Occupation</h3>
+                        </div>
+                    </div>
+                    <div class="p-col">
+                        <div class="p-text-center p-pt-lg-3 p-pr-lg-6"> 
+                            <button pButton type="button" label="Add" class="p-button-md" (click)="addNewOccupationStatus()"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngFor="let ms of occupationStatus; let i = index" class="p-pb-lg-3">
+                    <p-dropdown [options]="occupationList" optionLabel="name"> </p-dropdown>  &nbsp; 
+                    <p-calendar  [showTransitionOptions]="'200ms'" [hideTransitionOptions]="'200ms'" showIcon="true" [readonlyInput]="true"></p-calendar>  &nbsp; 
+                    <button pButton type="button" class="p-button-md"  icon="pi pi-trash" (click)="deleteOccupationStatus(i)" ></button>
+                </div>
+
+                <div class="p-pl-lg-1" *ngIf="occupationStatus.length == 0">
+                    <br>
+                    <br>
+                    No Occupation data available, click the Add button to add marital status
+                </div>
+                 
+            </div>
+
+            <div class="p-col">
+                <div class="p-grid">
+                    <div class="p-col">
+                        <div class="p-text-left"> 
+                            <h3>Location</h3>
+                        </div>
+                    </div>
+                    <div class="p-col">
+                        <div class="p-text-center p-pt-lg-3 p-pr-lg-6"> 
+                            <button pButton type="button" label="Add" class="p-button-md" (click)="addNewLocationStatus()"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngFor="let ns of locationStatus; let i = index" class="p-pb-lg-3">
+                    <p-dropdown [options]="locationList" optionLabel="name"> </p-dropdown>  &nbsp; 
+                    <p-calendar  [showTransitionOptions]="'200ms'" [hideTransitionOptions]="'200ms'" showIcon="true" [readonlyInput]="true"></p-calendar>  &nbsp; 
+                    <button pButton type="button" class="p-button-md"  icon="pi pi-trash" (click)="deleteLocationStatus(i)" ></button>
+                </div>
+
+                <div class="p-pl-lg-1" *ngIf="locationStatus.length == 0">
+                    <br>
+                    <br>
+                    No Location data available, click the Add button to add your Nationality status
+                </div>
+            </div>
+
+        </div>
+
+        
+
+    </p-card>
+</div>

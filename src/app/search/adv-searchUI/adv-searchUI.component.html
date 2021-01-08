@@ -1,0 +1,84 @@
+<div>
+    <p-card>
+        <div class="p-grid">
+            <div class="p-col">
+                <div class="p-px-lg-6">
+                    <div class="p-text-center">
+                        <!-- <h2 style="font-style:unset">Search a family member</h2> -->
+        
+                        <div class="p-fluid p-formgrid p-grid p-pb-lg-4 ">
+                            <span class="p-float-label p-col">
+                                <input id="float-input1" type="text" pInputText> 
+                                <label for="float-input">Firstname</label>
+                            </span>
+        
+                            <span class="p-float-label p-col">
+                                <input id="float-input2" type="text" pInputText> 
+                                <label for="float-input">Lastname</label>
+                            </span>
+            
+                            <span class="p-float-label p-col">
+                                <input id="float-input3" type="text" pInputText> 
+                                <label for="float-input">Father Firstname</label>
+                            </span>
+        
+                            <span class="p-float-label p-col">
+                                <input id="float-input4" type="text" pInputText> 
+                                <label for="float-input">Father Lastname</label>
+                            </span>
+                        </div>
+                        <div class="p-fluid p-formgrid p-grid">
+
+                            <span class="p-col">
+                                <button *ngIf="!showAdvancedSearchOption" pButton type="button" label="Advanced" class="p-button-secondary" icon="pi pi-caret-down" (click)="onAdvancedClick($event)"></button>
+                                <button *ngIf="showAdvancedSearchOption" pButton type="button" label="Advanced" class="p-button-secondary" icon="pi pi-caret-up" (click)="onAdvancedClick($event)"></button>
+                            </span>
+
+                            <span class="p-col"></span>
+
+                            <span class="p-float-label p-col">
+                                <input id="float-input5" type="text" pInputText> 
+                                <label for="float-input">Mother Firstname</label>
+                            </span>
+        
+                            <span class="p-float-label p-col">
+                                <input id="float-input6" type="text" pInputText> 
+                                <label for="float-input">Mother Lastname</label>
+                            </span>
+                        </div>
+                        <div class="p-fluid p-formgrid p-grid p-pt-lg-4" *ngIf="showAdvancedSearchOption">
+                            <span class="p-float-label p-col">
+                                <input id="float-input7" type="text" pInputText> 
+                                <label for="float-input">Grandfather Firstname</label>
+                            </span>
+        
+                            <span class="p-float-label p-col">
+                                <input id="float-input8" type="text" pInputText> 
+                                <label for="float-input">Grandfather Lastname</label>
+                            </span>
+            
+                            <span class="p-float-label p-col">
+                                <input id="float-input9" type="text" pInputText> 
+                                <label for="float-input">Grandmother Firstname</label>
+                            </span>
+        
+                            <span class="p-float-label p-col">
+                                <input id="float-input10" type="text" pInputText> 
+                                <label for="float-input">Grandmother Lastname</label>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="p-col-fixed" style="width: 200px;">
+                <div class="p-px-lg-6 p-pt-lg-4">
+                    <div class="p-text-center">
+                        <button pButton type="button" label="Search" class="p-button-lg"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </p-card>
+</div>
