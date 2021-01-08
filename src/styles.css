@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+.p-menubar {
+    height: 50px;
+}
+
+.p-megamenu {
+    height: 50px;
+    width: 160px;
+}
+
+p-megaMenu .p-menuitem {
+    margin-top: -8px;
+    padding-top: -8px;
+}
+
+p-megaMenu .p-menu-list {
+   padding: 400px;
+   font-size: 400px;
+}
+
+.p-megamenu .p-megamenu-panel {
+    width: 160px;
+}
+
+.p-megamenu .p-megamenu-panel ul{
+    width: auto;
+}
+
+
+
+/* .p-card {
+    background: #4879e2;
+    color: #aec721;
+    height: 400px;
+} */
+
+/* .content-div{
+    width: 250px;
+    
+} */
